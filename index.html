@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tiger Tale Tracker</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+  <header>
+    <h1>Tiger Tale Tracker</h1>
+    <p>Type your article. The bias tracker shifts as your writing becomes more positive, neutral, or negative in tone.</p>
+  </header>
+
+  <section class="mainLayout">
+
+    <!-- LEFT: BIAS TRACKER -->
+    <div class="biasTracker">
+      <h2>Bias Tracker</h2>
+
+      <div class="emojiRow verticalEmojiRow">
+        <div id="emoji" class="emoji">🐯</div>
+        <div class="status">
+          <div class="label">Tone indicator</div>
+          <div id="statusText" class="statusText">Neutral tone</div>
+        </div>
+      </div>
+
+      <div class="barSection">
+        <div class="barLabelsLeft">
+          <span>Positive tone</span>
+          <span>Neutral tone</span>
+          <span>Negative tone</span>
+        </div>
+
+        <div class="barWrap verticalBarWrap">
+          <div class="barBg verticalBarBg">
+            <div class="neutralLine"></div>
+            <div id="barKnob" class="barKnob verticalBarKnob"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats verticalStats">
+        <div class="pill">Score: <span id="scoreNum">0</span></div>
+        <div class="pill">Positive: <span id="posHits">0</span></div>
+        <div class="pill">Negative: <span id="negHits">0</span></div>
+      </div>
+    </div>
+
+    <!-- CENTER: ARTICLE -->
+    <div class="pane articlePane">
+      <label for="inputText">Student Article</label>
+      <textarea id="inputText" placeholder="Start typing here..."></textarea>
+    </div>
+
+    <!-- RIGHT: FEEDBACK -->
+    <div class="pane feedbackPane">
+      <div class="feedbackTop">
+        <span class="feedbackTitle">Feedback</span>
+        <button id="clearBtn" class="btn">Clear</button>
+      </div>
+
+      <div class="tipsInline">
+        <ul id="tips"></ul>
+      </div>
+
+      <div id="preview" class="preview"></div>
+    </div>
+
+  </section>
+
+  <footer>
+    <small>Heuristic demo: for classroom feedback, not a “truth machine.”</small>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
