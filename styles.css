@@ -5,7 +5,6 @@
 
   --ink:#1c1814;
   --ink-2:#2a241d;
-  --ink-3:#3a3228;
 
   --shadow:rgba(28,24,20,.18);
   --border:rgba(28,24,20,.14);
@@ -16,8 +15,6 @@
 
   --text:#241d16;
   --muted:#6e6252;
-
-  --gold:#d8b24a;
 }
 
 /* RESET */
@@ -52,7 +49,6 @@ header h1{
   margin:0 0 6px;
   font-size:32px;
   letter-spacing:.3px;
-  color:var(--ink);
 }
 
 header p{
@@ -105,11 +101,6 @@ header p{
   background:
     linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,.10)),
     var(--panel-2);
-}
-
-.biasTracker h2{
-  margin:0;
-  font-size:18px;
 }
 
 .verticalEmojiRow{
@@ -289,9 +280,22 @@ textarea{
   background: rgba(255,255,255,.6);
 }
 
+/* QUOTED TEXT */
+.quotedText{
+  opacity:.75;
+  font-style:italic;
+}
+
 /* FOOTER */
 footer{
   margin-top:14px;
   text-align:center;
   color:var(--muted);
+}
+
+/* MOBILE */
+@media (max-width: 900px){
+  .mainLayout{
+    grid-template-columns: 1fr;
+  }
 }
