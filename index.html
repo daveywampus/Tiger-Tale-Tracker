@@ -1,0 +1,63 @@
+<div class="app">
+  <header>
+    <h1>Tiger Tale Tracker</h1>
+    <p>Type your article. The bias tracker shifts as your writing becomes more positive, neutral, or negative in tone.</p>
+  </header>
+
+  <section class="mainLayout">
+    <div class="biasTracker">
+      <h2>Bias Tracker</h2>
+
+      <div class="emojiRow verticalEmojiRow">
+        <div id="emoji" class="emoji" aria-label="bias emoji" title="Bias indicator">😐</div>
+        <div class="status">
+          <div class="label">Tone indicator</div>
+          <div id="statusText" class="statusText">Neutral tone</div>
+        </div>
+      </div>
+
+      <div class="barSection">
+        <div class="barLabelsLeft">
+          <span>Positive tone</span>
+          <span>Neutral tone</span>
+          <span>Negative tone</span>
+        </div>
+
+        <div class="barWrap verticalBarWrap" role="meter" aria-valuemin="-50" aria-valuemax="50" aria-valuenow="0">
+          <div class="barBg verticalBarBg">
+            <div class="neutralLine"></div>
+            <div id="barKnob" class="barKnob verticalBarKnob"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats verticalStats">
+        <div class="pill"><span class="k">Tone score</span> <span id="scoreNum" class="v">0</span></div>
+        <div class="pill"><span class="k">Positive hits</span> <span id="posHits" class="v">0</span></div>
+        <div class="pill"><span class="k">Negative hits</span> <span id="negHits" class="v">0</span></div>
+      </div>
+    </div>
+
+    <div class="pane articlePane">
+      <label for="inputText">Student Article</label>
+      <textarea id="inputText" placeholder="Start typing here..."></textarea>
+    </div>
+
+    <div class="pane feedbackPane">
+      <div class="feedbackTop">
+        <span class="feedbackTitle">Feedback</span>
+        <button id="clearBtn" class="btn" type="button">Clear</button>
+      </div>
+
+      <div class="tipsInline">
+        <ul id="tips" class="tips"></ul>
+      </div>
+
+      <div id="preview" class="preview" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <footer>
+    <small>Heuristic demo: for classroom feedback, not a “truth machine.”</small>
+  </footer>
+</div>
